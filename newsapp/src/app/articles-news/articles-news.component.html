@@ -1,0 +1,38 @@
+
+<div *ngIf="dataPersistenceService.searchAnyNews" class="center example-button-row">  
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter the text to search any news</mat-label>
+      <input matInput placeholder="Ex. BBC or Sachin Tendulkar" type="text" #searchText id="searchText">
+    </mat-form-field>
+  </form>
+
+  <button (click)="searchNewsBtn(searchText.value)" mat-button style="background-color: #3f51b5; color: white;">
+    Search News
+  </button>
+  <!-- <section>
+    <div class="example-button-row">
+      <button mat-button>Search News</button>
+    </div>
+  </section> -->
+</div>
+
+<mat-card *ngFor="let article of articlesNews$ | async">
+  <mat-card-header>
+    <mat-card-title class="title">{{ article.title }}</mat-card-title>
+    <mat-card-subtitle>{{ article.source.name }}</mat-card-subtitle>
+  </mat-card-header>
+  <!-- style="width: auto; max-width: 100%;" -->
+  <img mat-card-image class="img-article" src="{{ article.urlToImage }}" alt="" />     
+  <mat-card-content>
+    <p>
+      {{ article.description }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions class="action-buttons">
+    <a mat-button color="primary" href="{{ article.url }}" target="_blank">
+      <mat-icon>description</mat-icon> Full Article
+    </a>
+  </mat-card-actions>
+  <hr/>
+</mat-card>

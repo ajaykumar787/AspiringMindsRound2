@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.aspiringminds.event.di.Employee" project="DependencyInjectionApp" 
+    file="/DependencyInjectionApp/src/main/java/com/aspiringminds/event/di/Employee.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="272" y="62"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.aspiringminds.event.di.SkillSets" project="DependencyInjectionApp" 
+    file="/DependencyInjectionApp/src/main/java/com/aspiringminds/event/di/SkillSets.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="271" y="361"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="com.aspiringminds.event.di.client.Client" project="DependencyInjectionApp" 
+    file="/DependencyInjectionApp/src/main/java/com/aspiringminds/event/di/client/Client.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="578" y="-58"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="com.aspiringminds.event.di.client.MyDIApplication" 
+    project="DependencyInjectionApp" 
+    file="/DependencyInjectionApp/src/main/java/com/aspiringminds/event/di/client/MyDIApplication.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="581" y="94"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="com.aspiringminds.event.di.injector.MessageServiceInjector" 
+    project="DependencyInjectionApp" 
+    file="/DependencyInjectionApp/src/main/java/com/aspiringminds/event/di/injector/MessageServiceInjector.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="946" y="-50"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" language="java" name="com.aspiringminds.event.di.injector.SMSServiceInjector" 
+    project="DependencyInjectionApp" 
+    file="/DependencyInjectionApp/src/main/java/com/aspiringminds/event/di/injector/SMSServiceInjector.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="158" x="791" y="36"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="com.aspiringminds.event.di.injector.EmailServiceInjector" 
+    project="DependencyInjectionApp" 
+    file="/DependencyInjectionApp/src/main/java/com/aspiringminds/event/di/injector/EmailServiceInjector.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="102" width="158" x="967" y="36"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.aspiringminds.event.di.service.EmailServiceImpl" 
+    project="DependencyInjectionApp" 
+    file="/DependencyInjectionApp/src/main/java/com/aspiringminds/event/di/service/EmailServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="105" width="184" x="384" y="336"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="com.aspiringminds.event.di.service.SMSServiceImpl" 
+    project="DependencyInjectionApp" 
+    file="/DependencyInjectionApp/src/main/java/com/aspiringminds/event/di/service/SMSServiceImpl.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="102" width="184" x="597" y="337"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="10" language="java" name="com.aspiringminds.event.di.service.MessageService" 
+    project="DependencyInjectionApp" 
+    file="/DependencyInjectionApp/src/main/java/com/aspiringminds/event/di/service/MessageService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="581" y="254"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <realization id="11">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <realization id="12">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <realization id="13">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <realization id="14">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <association id="15">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="16" name="service"/>      
+      <multiplicity id="17" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="18">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="19" name="skillSets"/>      
+      <multiplicity id="20" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="21">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

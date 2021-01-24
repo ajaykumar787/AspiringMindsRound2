@@ -1,0 +1,76 @@
+<p-toast [style]="{ marginTop: '80px' }"></p-toast>
+
+<form [formGroup]="userDetailsForm" (ngSubmit)="onSubmit(userDetailsForm.value)">
+    <p-panel header="User Details">
+        <div class="p-fluid forms-grid center" style="margin: 1em 0;">
+            <div>
+                <div style="font-weight: bold;">Full Name <span style="color: red;">* (Space is allowed)</span></div>
+                <input pInputText type="text" formControlName="name" placeholder="Required" />
+                <p-message severity="error" text="Full Name is required" *ngIf="!userDetailsForm.controls['name'].valid && 
+                    userDetailsForm.controls['name'].dirty && userDetailsForm.controls['name'].errors.required"></p-message>
+                <p-message severity="error" text="Enter only Alphabets" *ngIf="!userDetailsForm.controls['name'].valid &&
+                    userDetailsForm.controls['name'].dirty && userDetailsForm.controls['name'].errors.pattern"></p-message>
+            </div><br/>            
+
+            <div>
+                <div style="font-weight: bold;">Gender <span style="color: red;">*</span></div>
+                <input id="male" type="radio" value="Male" name="gender" formControlName="gender">
+                <label for="male">Male</label>
+
+                <input id="female" type="radio" value="Female" name="gender" formControlName="gender">
+                <label for="female">Female</label>
+
+                <p-message severity="error" text="Gender is required" *ngIf="!userDetailsForm.controls['gender'].valid &&
+                    userDetailsForm.controls['gender'].touched"></p-message>
+            </div><br/>
+
+            <div>
+                <div style="font-weight: bold;">Age <span style="color: red;">*</span></div>
+                <input pInputText type="number" formControlName="age" placeholder="Required" />
+                <p-message severity="error" text="Age is required" *ngIf="!userDetailsForm.controls['age'].valid &&
+                    userDetailsForm.controls['age'].dirty && userDetailsForm.controls['age'].errors.required"></p-message>
+                <p-message severity="error" text="Enter only numbers" *ngIf="!userDetailsForm.controls['age'].valid &&
+                    userDetailsForm.controls['age'].dirty && userDetailsForm.controls['age'].errors.pattern"></p-message>
+                <p-message severity="error" text="Enter age within range 1 - 99" *ngIf="!userDetailsForm.controls['age'].valid &&
+                    userDetailsForm.controls['age'].dirty && (userDetailsForm.controls['age'].errors.min || 
+                    userDetailsForm.controls['age'].errors.max)"></p-message>
+            </div><br/>
+
+            <div>
+                <div style="font-weight: bold;">PAN Number <span style="color: red;">*</span></div>
+                <input pInputText type="text" formControlName="panNo" placeholder="Required" maxlength="10" />
+                <p-message severity="error" text="PAN Number is required" *ngIf="!userDetailsForm.controls['panNo'].valid &&
+                    userDetailsForm.controls['panNo'].dirty && userDetailsForm.controls['panNo'].errors.required"></p-message>
+                <p-message severity="error" text="Enter valid PAN Number" *ngIf="!userDetailsForm.controls['panNo'].valid &&
+                    userDetailsForm.controls['panNo'].dirty && userDetailsForm.controls['panNo'].errors.pattern"></p-message>
+            </div><br/>
+
+            <div>
+                <div style="font-weight: bold;">Passport Number <span style="color: red;">*</span></div>
+                <input pInputText type="text" formControlName="passportNo" placeholder="Required" maxlength="10" />
+                <p-message severity="error" text="Passport Number is required" *ngIf="!userDetailsForm.controls['passportNo'].valid &&
+                    userDetailsForm.controls['passportNo'].dirty && userDetailsForm.controls['passportNo'].errors.required"></p-message>
+                <p-message severity="error" text="Enter valid Passport Number" *ngIf="!userDetailsForm.controls['passportNo'].valid &&
+                    userDetailsForm.controls['passportNo'].dirty && userDetailsForm.controls['passportNo'].errors.pattern"></p-message>
+            </div><br/>
+
+            <div>
+                <div style="font-weight: bold;">Currency <span style="color: red;">*</span></div>
+                <input pInputText type="text" formControlName="currency" placeholder="Required" maxlength="20" />
+                <p-message severity="error" text="Currency is required" *ngIf="!userDetailsForm.controls['currency'].valid &&
+                    userDetailsForm.controls['currency'].dirty && userDetailsForm.controls['currency'].errors.required"></p-message>
+                <p-message severity="error" text="Enter valid Currency" *ngIf="!userDetailsForm.controls['currency'].valid &&
+                    userDetailsForm.controls['currency'].dirty && userDetailsForm.controls['currency'].errors.pattern"></p-message>
+            </div><br/>
+                        
+            <div>
+                <button pButton type="submit" label="Submit" [disabled]="!userDetailsForm.valid"></button>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;" *ngIf="submitted">                
+            <br />
+                {{ jsonRequest }}                                                             
+            </div>
+        </div>
+    </p-panel>
+</form>

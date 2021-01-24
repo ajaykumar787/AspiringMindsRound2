@@ -1,0 +1,30 @@
+# compiled output
+/dist
+/tmp
+/out-tsc
+
+# dependencies
+/node_modules
+package-lock.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+*.launch
+.settings/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/coverage
+
+# System Files
+.DS_Store
+Thumbs.db

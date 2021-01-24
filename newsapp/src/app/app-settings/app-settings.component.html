@@ -1,0 +1,13 @@
+<div class="center">
+  <form>
+    <mat-form-field appearance="fill">
+      <mat-label>Select the Country</mat-label>
+      <mat-select [(ngModel)]="dataPersistenceService.selectedCountry" name="country" (selectionChange)="onCountryChange()">
+        <mat-option *ngFor="let country of countryList" [value]="country.value">
+          {{country.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p> Selected Country : {{dataPersistenceService.selectedCountry}}</p>
+  </form>
+</div>

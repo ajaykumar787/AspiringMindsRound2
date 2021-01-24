@@ -1,0 +1,69 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/articles-world-news']" routerLinkActive="router-link-active"
+      (click)="onNewsClick('World News')">
+        World News
+      </a>
+      <a mat-list-item [routerLink]="['/articles-india-news']" routerLinkActive="router-link-active" 
+      (click)="onNewsClick('India News')">
+        India News
+      </a>
+      <a mat-list-item [routerLink]="['/articles-business']" routerLinkActive="router-link-active"
+      (click)="onNewsClick('Business News')">
+        Business News
+      </a>
+      <a mat-list-item [routerLink]="['/articles-technology']" routerLinkActive="router-link-active"
+      (click)="onNewsClick('Technology News')">
+        Technology News
+      </a>
+      <a mat-list-item [routerLink]="['/articles-general']" routerLinkActive="router-link-active"
+      (click)="onNewsClick('General News')">
+        General News
+      </a>
+      <a mat-list-item [routerLink]="['/articles-health']" routerLinkActive="router-link-active"
+      (click)="onNewsClick('Health News')">
+        Health News
+      </a>
+      <a mat-list-item [routerLink]="['/articles-science']" routerLinkActive="router-link-active"
+      (click)="onNewsClick('Science News')">
+        Science News
+      </a>
+      <a mat-list-item [routerLink]="['/articles-entertainment']" routerLinkActive="router-link-active"
+      (click)="onNewsClick('Entertainment News')">
+        Entertainment News
+      </a>
+      <a mat-list-item [routerLink]="['/articles-sports']" routerLinkActive="router-link-active"
+      (click)="onNewsClick('Sports News')">
+        Sports News
+      </a>
+      <!-- <a mat-list-item [routerLink]="['/articles-javascript']" routerLinkActive="router-link-active"
+      (click)="onNewsClick('Javascript News')">
+        JavaScript News
+      </a> -->
+      <a mat-list-item [routerLink]="['/articles-search-news']" routerLinkActive="router-link-active"
+      (click)="onNewsClick('Search News')">
+        Search News
+      </a>
+      <a mat-list-item [routerLink]="['/app-settings']" routerLinkActive="router-link-active">
+        App Settings
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>
+        News App - {{dataPersistenceService.selectedNewsCategory | uppercase }} - {{dataPersistenceService.selectedCountryValue}}
+      </span>      
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <!-- <app-articles-technology></app-articles-technology> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
